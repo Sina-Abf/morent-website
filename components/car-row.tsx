@@ -29,13 +29,6 @@ const CarRow = ({
           <CarItem key={item.name} data={item} />
         ))}
       </ul>
-      <div className="flex justify-between mb-14 items-center">
-        <div></div>
-        <button className="rounded-md bg-primary text-white font-semibold py-2 px-4">
-          Show More Car
-        </button>
-        <h2 className="text-secondary-300 text-lg font-semibold">120 Car</h2>
-      </div>
     </div>
   );
 };
