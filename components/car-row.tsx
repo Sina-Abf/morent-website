@@ -1,4 +1,5 @@
 import { TPopularCar } from "@/public/data";
+import classNames from "classnames";
 import CarItem from "./car-item";
 
 const CarRow = ({
@@ -18,11 +19,23 @@ const CarRow = ({
           View All
         </h2>
       </div>
-      <ul className="flex justify-between gap-x-8 overflow-scroll scroll-hide">
+      <ul
+        className={classNames(
+          "mb-12 md:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 flex gap-x-8 overflow-scroll scroll-hide",
+          rowTitle === "Recomendation Car" ? "grid grid-cols-1" : ""
+        )}
+      >
         {data?.map((item: TPopularCar) => (
-          <CarItem data={item} />
+          <CarItem key={item.name} data={item} />
         ))}
       </ul>
+      <div className="flex justify-between mb-14 items-center">
+        <div></div>
+        <button className="rounded-md bg-primary text-white font-semibold py-2 px-4">
+          Show More Car
+        </button>
+        <h2 className="text-secondary-300 text-lg font-semibold">120 Car</h2>
+      </div>
     </div>
   );
 };

@@ -18,16 +18,38 @@ const CarItem = ({ data }: { data: TPopularCar }) => {
         <div onClick={() => setHeartFilled((prev) => !prev)}>
           <Heart
             className={classNames(
-              "stroke stroke-secondary-300",
-              heartFilled && "fill-[#ED3F3F] stroke-[#ED3F3F]"
+              heartFilled
+                ? "fill-[#ED3F3F] stroke-[#ED3F3F]"
+                : "stroke stroke-secondary-300"
             )}
           />
         </div>
       </div>
-      <div className="flex justify-center mb-12">
+      <div
+        className={classNames(
+          "flex justify-center mb-12",
+          data.recommended && "justify-between"
+        )}
+      >
         <Image width={250} height={250} src={data.image} alt={data.name} />
+        {data.recommended && (
+          <div className="flex flex-col justify-between p-1 mb-4 text-xs md:text-base sm:hidden">
+            <div className="flex gap-x-1 items-center">
+              <GasIcon />
+              <p className="text-secondary-300">{data.gas}</p>
+            </div>
+            <div className="flex gap-x-1 items-center">
+              <SteerWheelIcon />
+              <p className="text-secondary-300">{data.gear}</p>
+            </div>
+            <div className="flex gap-x-1 items-center">
+              <PeopleIcon />
+              <p className="text-secondary-300">{data.capacity}</p>
+            </div>
+          </div>
+        )}
       </div>
-      <div className="flex justify-between p-1 mb-4 text-xs md:text-base">
+      <div className="hidden sm:flex justify-between p-1 mb-4 text-xs md:text-base">
         <div className="flex gap-x-1 items-center">
           <GasIcon />
           <p className="text-secondary-300">{data.gas}</p>
@@ -42,9 +64,16 @@ const CarItem = ({ data }: { data: TPopularCar }) => {
         </div>
       </div>
       <div className="flex items-center justify-between px-4 py-1">
-        <div className="flex items-center">
-          <h2 className="font-bold text-lg">${data.price.toFixed(2)}/ </h2>
-          <p className="text-secondary-300 font-semibold">day</p>
+        <div className="flex flex-col">
+          <div className="flex items-center">
+            <h2 className="font-bold text-lg">${data.price.toFixed(2)}/ </h2>
+            <p className="text-secondary-300 font-semibold">day</p>
+          </div>
+          {data.discount && (
+            <h2 className="text-secondary-300 font-semibold text-sm line-through">
+              ${data.discount.toFixed(2)}
+            </h2>
+          )}
         </div>
         <button className="bg-primary px-4 py-2 rounded-md text-white font-semibold min-w-fit mx-4 md:mx-0">
           Rent Now
