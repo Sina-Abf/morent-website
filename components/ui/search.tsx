@@ -16,10 +16,10 @@ const Search = ({
         iconShow && "flex justify-between"
       )}
     >
-      <div className="flex gap-x-4 ">
+      <div className="flex gap-x-4  w-full">
         <SearchIcon />
         <input
-          className="text-sm text-secondary-400 placeholder:text-secondary-400 outline-none"
+          className="text-sm w-full text-secondary-400 placeholder:text-secondary-400 outline-none"
           placeholder="Search something here"
           type="search"
           name="search"

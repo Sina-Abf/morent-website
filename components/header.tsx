@@ -15,12 +15,20 @@ const Header = () => {
           />
         </div>
         <div className="flex items-center gap-x-4">
-          <div className="hidden md:flex gap-x-4">
-            <SettingsIcon />
-            <NotificationIcon />
-            <HeartIcon />
+          <div className="hidden md:flex gap-x-4 [&_div]:cursor-pointer">
+            <div>
+              <SettingsIcon />
+            </div>
+            <div>
+              <NotificationIcon />
+            </div>
+            <div>
+              <HeartIcon />
+            </div>
           </div>
-          <Image width={50} height={50} src={profile} alt="profile" />
+          <div className="hover:scale-125 transition-transform duration-300">
+            <Image width={50} height={50} src={profile} alt="profile" />
+          </div>
         </div>
       </div>
 

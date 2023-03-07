@@ -33,34 +33,34 @@ const CarItem = ({ data }: { data: TPopularCar }) => {
       >
         <Image width={250} height={250} src={data.image} alt={data.name} />
         {data.recommended && (
-          <div className="flex flex-col justify-between p-1 mb-4 text-xs md:text-base sm:hidden">
-            <div className="flex gap-x-1 items-center">
+          <div className="flex flex-col justify-between p-1 mb-4 text-xs md:text-base sm:hidden [&_p]:text-secondary-300 [&_div]:flex [&_div]:gap-x-1 [&_div]:items-center">
+            <div>
               <GasIcon />
-              <p className="text-secondary-300">{data.gas}</p>
+              <p>{data.gas}</p>
             </div>
-            <div className="flex gap-x-1 items-center">
+            <div>
               <SteerWheelIcon />
-              <p className="text-secondary-300">{data.gear}</p>
+              <p>{data.gear}</p>
             </div>
-            <div className="flex gap-x-1 items-center">
+            <div>
               <PeopleIcon />
-              <p className="text-secondary-300">{data.capacity}</p>
+              <p>{data.capacity}</p>
             </div>
           </div>
         )}
       </div>
-      <div className="hidden sm:flex justify-between p-1 mb-4 text-xs md:text-base">
-        <div className="flex gap-x-1 items-center">
+      <div className="hidden sm:flex justify-between p-1 mb-4 text-xs md:text-base [&_p]:text-secondary-300 [&_div]:flex [&_div]:gap-x-1 [&_div]:items-center">
+        <div>
           <GasIcon />
-          <p className="text-secondary-300">{data.gas}</p>
+          <p>{data.gas}</p>
         </div>
-        <div className="flex gap-x-1 items-center">
+        <div>
           <SteerWheelIcon />
-          <p className="text-secondary-300">{data.gear}</p>
+          <p>{data.gear}</p>
         </div>
-        <div className="flex gap-x-1 items-center">
+        <div>
           <PeopleIcon />
-          <p className="text-secondary-300">{data.capacity}</p>
+          <p>{data.capacity}</p>
         </div>
       </div>
       <div className="flex items-center justify-between px-4 py-1">
