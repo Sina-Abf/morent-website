@@ -10,7 +10,11 @@ export default function Home() {
     <main className={`${plusJakarta.className} md:p-4`}>
       <Hero />
       <CarRow rowTitle="Popular Car" data={popularCar} />
-      <CarRow rowTitle="Recomendation Car" data={recommendationCar} />
+      <CarRow
+        mobileView
+        rowTitle="Recomendation Car"
+        data={recommendationCar}
+      />
       <div className="flex justify-between px-10 mb-14 items-center">
         <div></div>
         <button className="rounded-md bg-primary text-white font-semibold py-2 px-4">

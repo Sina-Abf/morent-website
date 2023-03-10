@@ -12,8 +12,8 @@ const CarItem = ({ data }: { data: TPopularCar }) => {
     <li className="bg-white p-4 w-full rounded-md">
       <div className="flex justify-between mb-8">
         <div>
-          <h2 className="font-bold text-lg">Koengisegg</h2>
-          <p className="text-xs text-secondary-300">Sport</p>
+          <h2 className="font-bold text-lg">{data.name}</h2>
+          <p className="text-xs text-secondary-300">{data.category}</p>
         </div>
         <div onClick={() => setHeartFilled((prev) => !prev)}>
           <Heart
@@ -28,7 +28,7 @@ const CarItem = ({ data }: { data: TPopularCar }) => {
       <div
         className={classNames(
           "flex justify-center mb-12",
-          data.recommended && "justify-between"
+          data.recommended && "justify-between md:justify-center"
         )}
       >
         <Image width={250} height={250} src={data.image} alt={data.name} />
