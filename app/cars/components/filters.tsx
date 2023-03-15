@@ -2,44 +2,33 @@
 
 import useFilterNameCount from "@/hooks/use-filter-name-count";
 import { allCars } from "@/public/data";
-import { useCarsStore } from "@/store/store";
-import { ChangeEvent } from "react";
+import CheckboxText from "./checkbox-text";
 
 const Filters = () => {
-  const carsFilter = useCarsStore((state: any) => state.filterCars);
-  const toggleCategory = useCarsStore((state: any) => state.toggleCategory);
-
-  const checkboxChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
-    const labelName = event.target.id.split("-")[1];
-    if (event.target.checked) {
-      toggleCategory(labelName);
-      carsFilter();
-    } else {
-      toggleCategory(labelName);
-      carsFilter();
-    }
-  };
-
-  const convertedData = useFilterNameCount(allCars);
+  const convertedDataCategory = useFilterNameCount(allCars, "category");
+  const convertedDataCapacity = useFilterNameCount(allCars, "capacity");
   return (
-    <aside className="bg-white h-full p-4 text-secondary-300 font-semibold">
-      <h3 className="mb-4">TYPE</h3>
+    <aside className="bg-white h-full p-4 text-secondary-300 font-semibold flex flex-col gap-y-4">
+      <div className="flex flex-col gap-y-4 pl-3 mb-4">
+        <h3>TYPE</h3>
+        {Object.keys(convertedDataCategory).map((dataName) => (
+          <CheckboxText
+            key={dataName}
+            data={convertedDataCategory}
+            dataName={dataName}
+            dataType="category"
+          />
+        ))}
+      </div>
       <div className="flex flex-col gap-y-4 pl-3">
-        {Object.keys(convertedData).map((categoryName) => (
-          <div key={categoryName} className="flex items-center gap-x-3">
-            <input
-              onChange={checkboxChangeHandler}
-              className="text-primary rounded p-2 focus:ring-0 focus:ring-offset-0"
-              id={`checkbox-${categoryName}`}
-              type="checkbox"
-            />
-            <label className="space-x-1" htmlFor="checkbox" key={categoryName}>
-              <span className="text-secondary-400">{categoryName}</span>
-              <span className="text-secondary-300">
-                ({convertedData[categoryName]})
-              </span>
-            </label>
-          </div>
+        <h3>CAPACITY</h3>
+        {Object.keys(convertedDataCapacity).map((dataName) => (
+          <CheckboxText
+            key={dataName}
+            data={convertedDataCapacity}
+            dataName={dataName}
+            dataType="capacity"
+          />
         ))}
       </div>
     </aside>
