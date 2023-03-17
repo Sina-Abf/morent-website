@@ -4,6 +4,7 @@ import { GasIcon, Heart, PeopleIcon, SteerWheelIcon } from "@/icons";
 import { TPopularCar } from "@/public/data";
 import classNames from "classnames";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 const CarItem = ({ data }: { data: TPopularCar }) => {
@@ -75,9 +76,12 @@ const CarItem = ({ data }: { data: TPopularCar }) => {
             </h2>
           )}
         </div>
-        <button className="bg-primary px-4 py-2 rounded-md text-white font-semibold min-w-fit mx-4 md:mx-0">
+        <Link
+          href={`cars/${data.id}`}
+          className="bg-primary px-4 py-2 rounded-md text-white font-semibold min-w-fit mx-4 md:mx-0"
+        >
           Rent Now
-        </button>
+        </Link>
       </div>
     </li>
   );

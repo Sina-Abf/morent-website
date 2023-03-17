@@ -1,12 +1,16 @@
-import { allCars, TPopularCar } from "@/public/data";
+import { TPopularCar } from "@/public/data";
 import { mountStoreDevtool } from "simple-zustand-devtools";
 import { create } from "zustand";
 
 export const useCarsStore = create((set) => ({
-  cars: allCars as TPopularCar[],
-  originalCars: allCars as TPopularCar[],
+  cars: [],
+  originalCars: [],
 
   selectedData: [],
+
+  allCarsSet: (data: TPopularCar[]) => {
+    set({ cars: data, originalCars: data });
+  },
 
   // this part checks if selectedData array is filled with data, if so it removes all, and if not new data will be added
   toggleCategory: (category: string) =>

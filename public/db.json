@@ -1,0 +1,241 @@
+{
+  "popular-cars": [
+    {
+      "name": "Koenigsegg",
+      "category": "Sport",
+      "image": "/images/popular-cars/car1.png",
+      "gas": "80L",
+      "gear": "Manual",
+      "capacity": "2 People",
+      "price": 99,
+      "id": 1
+    },
+    {
+      "name": "Nissan GT - R",
+      "category": "Sport",
+      "image": "/images/popular-cars/car2.png",
+      "gas": "90L",
+      "gear": "Manual",
+      "capacity": "2 People",
+      "price": 80,
+      "discount": 100,
+      "id": 2
+    },
+    {
+      "name": "Rolls - Royce",
+      "category": "Sedan",
+      "image": "/images/popular-cars/car3.png",
+      "gas": "70L",
+      "gear": "Manual",
+      "capacity": "4 People",
+      "price": 96,
+      "id": 3
+    },
+    {
+      "name": "Nissan GT - R",
+      "category": "Sport",
+      "image": "/images/popular-cars/car1.png",
+      "gas": "90L",
+      "gear": "Manual",
+      "capacity": "2 People",
+      "price": 99,
+      "id": 4
+    }
+  ],
+  "all-cars": [
+    {
+      "name": "Koenigsegg",
+      "category": "Sport",
+      "image": "/images/popular-cars/car1.png",
+      "gas": "80L",
+      "gear": "Manual",
+      "capacity": "2 People",
+      "price": 99,
+      "recommended": true,
+      "id": 1
+    },
+    {
+      "name": "Nissan GT - R",
+      "category": "Sport",
+      "image": "/images/popular-cars/car2.png",
+      "gas": "90L",
+      "gear": "Manual",
+      "capacity": "2 People",
+      "price": 80,
+      "discount": 100,
+      "recommended": true,
+      "id": 2
+    },
+    {
+      "name": "Rolls - Royce",
+      "category": "Sedan",
+      "image": "/images/popular-cars/car3.png",
+      "gas": "70L",
+      "gear": "Manual",
+      "capacity": "4 People",
+      "price": 96,
+      "recommended": true,
+      "id": 3
+    },
+    {
+      "name": "All New Rush",
+      "category": "SUV",
+      "image": "/images/recomendation-cars/car-1.png",
+      "gas": "70L",
+      "gear": "Manual",
+      "capacity": "6 People",
+      "price": 72,
+      "discount": 80,
+      "recommended": true,
+      "id": 4
+    },
+    {
+      "name": "CR  - V",
+      "category": "SUV",
+      "image": "/images/recomendation-cars/car-2.png",
+      "gas": "80L",
+      "gear": "Manual",
+      "capacity": "6 People",
+      "price": 80,
+      "recommended": true,
+      "id": 5
+    },
+    {
+      "name": "All New Terios",
+      "category": "SUV",
+      "image": "/images/recomendation-cars/car-3.png",
+      "gas": "90L",
+      "gear": "Manual",
+      "capacity": "6 People",
+      "price": 74,
+      "recommended": true,
+      "id": 6
+    },
+    {
+      "name": "New MG ZS",
+      "category": "SUV",
+      "image": "/images/recomendation-cars/car-4.png",
+      "gas": "80L",
+      "gear": "Manual",
+      "capacity": "6 People",
+      "price": 80,
+      "recommended": true,
+      "id": 7
+    },
+    {
+      "name": "MG ZX Exclusive",
+      "category": "Hatchback",
+      "image": "/images/recomendation-cars/car-1.png",
+      "gas": "70L",
+      "gear": "Manual",
+      "capacity": "6 People",
+      "price": 72,
+      "discount": 80,
+      "recommended": true,
+      "id": 8
+    },
+    {
+      "name": "New MG ZS",
+      "category": "SUV",
+      "image": "/images/recomendation-cars/car-4.png",
+      "gas": "80L",
+      "gear": "Manual",
+      "capacity": "6 People",
+      "price": 80,
+      "recommended": true,
+      "id": 9
+    }
+  ],
+  "recommended-cars": [
+    {
+      "name": "All New Rush",
+      "category": "SUV",
+      "image": "/images/recomendation-cars/car-1.png",
+      "gas": "70L",
+      "gear": "Manual",
+      "capacity": "6 People",
+      "price": 72,
+      "discount": 80,
+      "recommended": true,
+      "id": 1
+    },
+    {
+      "name": "CR  - V",
+      "category": "SUV",
+      "image": "/images/recomendation-cars/car-2.png",
+      "gas": "80L",
+      "gear": "Manual",
+      "capacity": "6 People",
+      "price": 80,
+      "recommended": true,
+      "id": 2
+    },
+    {
+      "name": "All New Terios",
+      "category": "SUV",
+      "image": "/images/recomendation-cars/car-3.png",
+      "gas": "90L",
+      "gear": "Manual",
+      "capacity": "6 People",
+      "price": 74,
+      "recommended": true,
+      "id": 3
+    },
+    {
+      "name": "CR  - V",
+      "category": "SUV",
+      "image": "/images/recomendation-cars/car-4.png",
+      "gas": "80L",
+      "gear": "Manual",
+      "capacity": "6 People",
+      "price": 80,
+      "recommended": true,
+      "id": 4
+    },
+    {
+      "name": "All New Rush",
+      "category": "SUV",
+      "image": "/images/recomendation-cars/car-5.png",
+      "gas": "70L",
+      "gear": "Manual",
+      "capacity": "6 People",
+      "price": 72,
+      "discount": 80,
+      "recommended": true,
+      "id": 5
+    },
+    {
+      "name": "CR  - V",
+      "category": "SUV",
+      "image": "/images/recomendation-cars/car-6.png",
+      "gas": "80L",
+      "gear": "Manual",
+      "capacity": "6 People",
+      "price": 80,
+      "recommended": true,
+      "id": 6
+    },
+    {
+      "name": "All New Terios",
+      "category": "SUV",
+      "image": "/images/recomendation-cars/car-7.png",
+      "gas": "90L",
+      "gear": "Manual",
+      "capacity": "6 People",
+      "price": 74,
+      "recommended": true,
+      "id": 7
+    },
+    {
+      "name": "CR  - V",
+      "category": "SUV",
+      "image": "/images/recomendation-cars/car-7.png",
+      "gas": "80L",
+      "gear": "Manual",
+      "capacity": "6 People",
+      "price": 80,
+      "recommended": true,
+      "id": 8
+    }
+  ]
+}

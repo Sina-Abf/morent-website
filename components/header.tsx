@@ -2,13 +2,16 @@ import Image from "next/image";
 import profile from "@/public/images/Imageprofile.png";
 import { FilterIcon, HeartIcon, NotificationIcon, SettingsIcon } from "@/icons";
 import Search from "./ui/search";
+import Link from "next/link";
 
 const Header = () => {
   return (
     <header className="p-4 md:bg-white md:px-8">
       <div className="flex justify-between items-center mb-5">
         <div className="flex gap-x-12 w-2/3 items-center">
-          <h2 className="text-primary text-2xl font-bold">MORENT</h2>
+          <Link href="/" className="text-primary text-2xl font-bold">
+            MORENT
+          </Link>
           <Search
             iconShow={true}
             className="hidden md:flex flex-1 max-w-sm rounded-full"

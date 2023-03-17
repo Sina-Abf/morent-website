@@ -1,12 +1,18 @@
 "use client";
 
+import { useAllCars } from "@/hooks/dataRequest/all-cars";
 import useFilterNameCount from "@/hooks/use-filter-name-count";
-import { allCars } from "@/public/data";
+import { useCarsStore } from "@/store/store";
 import CheckboxText from "./checkbox-text";
 
 const Filters = () => {
-  const convertedDataCategory = useFilterNameCount(allCars, "category");
-  const convertedDataCapacity = useFilterNameCount(allCars, "capacity");
+  const { data, isSuccess } = useAllCars();
+
+  const convertedDataCategory =
+    isSuccess && useFilterNameCount(data, "category");
+  const convertedDataCapacity =
+    isSuccess && useFilterNameCount(data, "capacity");
+
   return (
     <aside className="bg-white h-full p-4 text-secondary-300 font-semibold flex flex-col gap-y-4">
       <div className="flex flex-col gap-y-4 pl-3 mb-4">
