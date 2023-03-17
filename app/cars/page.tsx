@@ -4,18 +4,12 @@ import CarRow from "@/components/car-row";
 import Spinner from "@/components/ui/spinner";
 import { useAllCars } from "@/hooks/dataRequest/all-cars";
 import { useCarsStore } from "@/store/store";
-import { useEffect } from "react";
 import Filters from "./components/filters";
 import OptionsFull from "./components/options-full";
 const Cars = () => {
   const carsData = useCarsStore((state: any) => state.cars);
-  const carsSetter = useCarsStore((state: any) => state.allCarsSet);
 
-  const { data, isLoading } = useAllCars();
-
-  useEffect(() => {
-    carsSetter(data);
-  }, [data]);
+  const { isLoading } = useAllCars();
 
   return (
     <>

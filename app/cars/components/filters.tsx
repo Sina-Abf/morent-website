@@ -2,7 +2,6 @@
 
 import { useAllCars } from "@/hooks/dataRequest/all-cars";
 import useFilterNameCount from "@/hooks/use-filter-name-count";
-import { useCarsStore } from "@/store/store";
 import CheckboxText from "./checkbox-text";
 
 const Filters = () => {

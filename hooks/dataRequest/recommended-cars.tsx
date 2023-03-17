@@ -1,9 +1,13 @@
 "use client";
 
+import { http } from "@/http";
+import { TPopularCar } from "@/public/data";
 import { useQuery } from "react-query";
 
 export const useRecommendedCarsData = () => {
-  return useQuery(["recommended-cars"], () =>
-    fetch("http://localhost:7000/recommended-cars").then((res) => res.json())
-  );
+  const { data, isLoading } = useQuery("recommended-cars", async () => {
+    const response = await http.get<TPopularCar[]>("/recommended-cars");
+    return response.data;
+  });
+  return { data: data ?? [], isLoading };
 };
