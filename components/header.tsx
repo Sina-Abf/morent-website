@@ -1,12 +1,17 @@
 import Image from "next/image";
 import profile from "@/public/images/Imageprofile.png";
-import { FilterIcon, HeartIcon, NotificationIcon, SettingsIcon } from "@/icons";
+import {
+  FilterIcon,
+  HeartIcon,
+  NotificationIcon,
+  SettingsIcon,
+} from "@/app/icons";
 import Search from "./ui/search";
 import Link from "next/link";
 
 const Header = () => {
   return (
-    <header className="p-4 md:bg-white md:px-8">
+    <header className="p-4 bg-white md:px-8 container mx-auto max-w-screen-2xl">
       <div className="flex justify-between items-center mb-5">
         <div className="flex gap-x-12 w-2/3 items-center">
           <Link href="/" className="text-primary text-2xl font-bold">

@@ -1,18 +1,21 @@
-import { TPopularCar } from "@/public/data";
+import { TPopularCar } from "@/public/type";
 import classNames from "classnames";
 import Link from "next/link";
 import CarItem from "./car-item";
+import Spinner from "./ui/spinner";
 
 const CarRow = ({
   rowTitle,
   data,
   className,
   mobileView,
+  isLoading,
 }: {
   rowTitle?: string;
   data: TPopularCar[];
   className?: string;
   mobileView?: boolean;
+  isLoading?: boolean;
 }) => {
   return (
     <div className="px-4 md:px-0">
@@ -29,17 +32,22 @@ const CarRow = ({
           </Link>
         </div>
       )}
-      <ul
-        className={classNames(
-          "mb-12 md:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 flex gap-x-8 overflow-scroll scroll-hide",
-          mobileView ? "grid grid-cols-1" : "",
-          className
-        )}
-      >
-        {data?.map((item: TPopularCar) => (
-          <CarItem key={item.id} data={item} />
-        ))}
-      </ul>
+      <div className="flex justify-center items-center">
+        {isLoading && <Spinner />}
+      </div>
+      {!isLoading && (
+        <ul
+          className={classNames(
+            "mb-12 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 gap-x-8 overflow-scroll scroll-hide",
+            mobileView ? "grid grid-cols-1" : "",
+            className
+          )}
+        >
+          {data?.map((item: TPopularCar) => (
+            <CarItem key={item.id} data={item} />
+          ))}
+        </ul>
+      )}
     </div>
   );
 };

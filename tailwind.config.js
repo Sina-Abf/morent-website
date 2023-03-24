@@ -9,6 +9,9 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      sans: ["var(--font-jakarta)"],
+    },
     colors: {
       background: "#F6F7F9",
       primary: "#3563E9",

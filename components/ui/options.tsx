@@ -1,4 +1,4 @@
-import { ChevronDownIcon } from "@/icons";
+import { ChevronDownIcon } from "@/app/icons";
 import classNames from "classnames";
 
 const Options = ({

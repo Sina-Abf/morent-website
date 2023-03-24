@@ -1,5 +1,5 @@
 import Options from "@/components/ui/options";
-import { UpDownArrowIcon } from "@/icons";
+import { UpDownArrowIcon } from "@/app/icons";
 import classNames from "classnames";
 
 const OptionsFull = ({ className }: { className?: string }) => {

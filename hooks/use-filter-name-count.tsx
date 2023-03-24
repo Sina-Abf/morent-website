@@ -1,4 +1,4 @@
-import { TPopularCar } from "@/public/data";
+import { TPopularCar } from "@/public/type";
 
 const useFilterNameCount = (data: TPopularCar[], name: string) => {
   const categoryCounts = data

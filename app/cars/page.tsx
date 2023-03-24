@@ -13,7 +13,7 @@ const Cars = () => {
 
   return (
     <>
-      <main className=" grid grid-cols-12 gap-4">
+      <main className=" grid grid-cols-12 gap-4 container mx-auto max-w-screen-2xl">
         <div className="col-span-2 hidden lg:block ">
           <Filters />
         </div>

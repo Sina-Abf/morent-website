@@ -5,7 +5,6 @@ const ReactQueryWrapper = ({ children }: { children: React.ReactNode }) => {
     defaultOptions: {
       queries: {
         refetchOnWindowFocus: false,
-        staleTime: 1000000,
       },
     },
   });

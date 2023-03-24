@@ -1,7 +1,7 @@
 "use client";
 
-import { GasIcon, Heart, PeopleIcon, SteerWheelIcon } from "@/icons";
-import { TPopularCar } from "@/public/data";
+import { GasIcon, Heart, PeopleIcon, SteerWheelIcon } from "@/app/icons";
+import { TPopularCar } from "@/public/type";
 import classNames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,14 +9,18 @@ import { useState } from "react";
 
 const CarItem = ({ data }: { data: TPopularCar }) => {
   const [heartFilled, setHeartFilled] = useState(false);
+
   return (
-    <li className="bg-white p-4 w-full rounded-md">
+    <li className="bg-white p-4 w-full rounded-md max-w-md mx-auto">
       <div className="flex justify-between mb-8">
         <div>
           <h2 className="font-bold text-lg">{data.name}</h2>
           <p className="text-xs text-secondary-300">{data.category}</p>
         </div>
-        <div onClick={() => setHeartFilled((prev) => !prev)}>
+        <div
+          className="cursor-pointer h-fit"
+          onClick={() => setHeartFilled((prev) => !prev)}
+        >
           <Heart
             className={classNames(
               heartFilled
@@ -26,31 +30,10 @@ const CarItem = ({ data }: { data: TPopularCar }) => {
           />
         </div>
       </div>
-      <div
-        className={classNames(
-          "flex justify-center mb-12",
-          data.recommended && "justify-between md:justify-center"
-        )}
-      >
+      <div className="flex justify-center items-center">
         <Image width={250} height={250} src={data.image} alt={data.name} />
-        {data.recommended && (
-          <div className="flex flex-col justify-between p-1 mb-4 text-xs md:text-base sm:hidden [&_p]:text-secondary-300 [&_div]:flex [&_div]:gap-x-1 [&_div]:items-center">
-            <div>
-              <GasIcon />
-              <p>{data.gas}</p>
-            </div>
-            <div>
-              <SteerWheelIcon />
-              <p>{data.gear}</p>
-            </div>
-            <div>
-              <PeopleIcon />
-              <p>{data.capacity}</p>
-            </div>
-          </div>
-        )}
       </div>
-      <div className="hidden sm:flex justify-between p-1 mb-4 text-xs md:text-base [&_p]:text-secondary-300 [&_div]:flex [&_div]:gap-x-1 [&_div]:items-center">
+      <div className="flex justify-center gap-x-8 items-center p-1 mt-4 mb-4 text-xs  [&_p]:text-secondary-300 [&_div]:flex [&_div]:gap-x-1 [&_div]:items-center">
         <div>
           <GasIcon />
           <p>{data.gas}</p>

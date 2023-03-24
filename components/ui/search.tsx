@@ -1,4 +1,4 @@
-import { FilterIcon, SearchIcon } from "@/icons";
+import { FilterIcon, SearchIcon } from "@/app/icons";
 import classNames from "classnames";
 
 const Search = ({

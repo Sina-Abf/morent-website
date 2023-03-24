@@ -32,7 +32,11 @@ const CheckboxText = ({
         id={`checkbox-${dataName}`}
         type="checkbox"
       />
-      <label className="space-x-1" htmlFor="checkbox" key={dataName}>
+      <label
+        className="space-x-1"
+        htmlFor={`checkbox-${dataName}`}
+        key={dataName}
+      >
         <span className="text-secondary-400">{dataName}</span>
         <span className="text-secondary-300">({data[dataName]})</span>
       </label>

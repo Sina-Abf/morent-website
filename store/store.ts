@@ -1,12 +1,20 @@
-import { TPopularCar } from "@/public/data";
+import { TPopularCar } from "@/public/type";
 import { mountStoreDevtool } from "simple-zustand-devtools";
 import { create } from "zustand";
 
 export const useCarsStore = create((set) => ({
   cars: [],
   originalCars: [],
-
   selectedData: [],
+  heartFilled: false,
+
+  setHeartFilled: (id: number) => {
+    set((state: any) => ({
+      cars: state.cars.map((car: TPopularCar) =>
+        car.id === id ? { ...car, heart_filled: !car.heart_filled } : car
+      ),
+    }));
+  },
 
   allCarsSet: (data: TPopularCar[]) => {
     set({ cars: data, originalCars: data });
@@ -38,6 +46,7 @@ export const useCarsStore = create((set) => ({
     })),
 }));
 
+// Zustand dev tools
 if (process.env.NODE_ENV === "development") {
   mountStoreDevtool("Store", useCarsStore);
 }

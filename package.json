@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "backend": "json-server --port 7000 --watch public/db.json"
   },
   "dependencies": {
     "@types/node": "18.14.6",
