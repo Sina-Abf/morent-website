@@ -1,6 +1,6 @@
 import Image from "next/image";
-import bodycar from "../public/images/body-car.png";
-import bodycar2 from "../public/images/body-car-2.png";
+import bodycar from "../../public/images/body-car.png";
+import bodycar2 from "../../public/images/body-car-2.png";
 import Options from "./ui/options";
 import { UpDownArrowIcon } from "@/app/icons";
 

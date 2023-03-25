@@ -36,7 +36,7 @@ const Options = ({
               <h2>{item.title}</h2>
               <div className="flex items-center justify-between">
                 <p>{item.subtitle}</p>
-                <ChevronDownIcon />
+                <ChevronDownIcon className="stroke-secondary-300" />
               </div>
             </div>
             {index !== 2 && (

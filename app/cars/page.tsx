@@ -1,9 +1,9 @@
 "use client";
 
-import CarRow from "@/components/car-row";
-import Spinner from "@/components/ui/spinner";
 import { useAllCars } from "@/hooks/dataRequest/all-cars";
 import { useCarsStore } from "@/store/store";
+import CarRow from "../components/car-row";
+import Spinner from "../components/ui/spinner";
 import Filters from "./components/filters";
 import OptionsFull from "./components/options-full";
 const Cars = () => {

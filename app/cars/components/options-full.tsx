@@ -1,4 +1,4 @@
-import Options from "@/components/ui/options";
+import Options from "@/app/components/ui/options";
 import { UpDownArrowIcon } from "@/app/icons";
 import classNames from "classnames";
 

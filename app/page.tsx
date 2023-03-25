@@ -1,15 +1,14 @@
 "use client";
 
-import CarRow from "@/components/car-row";
-import Hero from "@/components/hero";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import CarRow from "./components/car-row";
+import Hero from "./components/hero";
 
 import { useAllCars } from "@/hooks/dataRequest/all-cars";
 
 export default function Home() {
   const { data, isLoading } = useAllCars();
 
-  const popularCars = data.filter((car) => car.popular_car);
+  const popularCars = data.slice(0, 3);
   const recommendedCars = data.filter((car) => car.recommended);
 
   return (

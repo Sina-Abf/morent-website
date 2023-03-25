@@ -24,7 +24,7 @@ const ImageHandler: React.FC<Props> = ({
   const [selectedImage, setSelectedImage] = useState<string>(imageOne);
 
   return (
-    <div>
+    <div className="">
       <div className="mb-4">
         <Image
           className="rounded-xl"

@@ -10,6 +10,14 @@ export interface TPopularCar {
   capacity: string;
   description: string;
   reviews: number;
+  reviews_describe: {
+    username: string;
+    position: string;
+    comment: string;
+    created_at: string;
+    stars_count: number;
+    profile_image: string;
+  }[];
   stars_count: number;
   price: number;
   discount?: number;

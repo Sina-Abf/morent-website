@@ -1,6 +1,6 @@
 "use client";
-import Footer from "@/components/footer";
-import Header from "@/components/header";
+import Footer from "./components/footer";
+import Header from "./components/header";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import ReactQueryWrapper from "./react-query-wrapper";

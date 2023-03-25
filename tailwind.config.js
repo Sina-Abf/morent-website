@@ -15,6 +15,7 @@ module.exports = {
     colors: {
       background: "#F6F7F9",
       primary: "#3563E9",
+      "primary-500": "#3563E9",
       "secondary-300": "#90A3BF",
       "secondary-400": "#596780",
       "secondary-500": "#1A202C",
@@ -23,5 +24,5 @@ module.exports = {
     },
     extend: {},
   },
-  plugins: [require("@tailwindcss/forms")],
+  plugins: [require("@tailwindcss/forms"), require("@tailwindcss/line-clamp")],
 };
