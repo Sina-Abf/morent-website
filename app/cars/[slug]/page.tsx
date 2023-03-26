@@ -15,9 +15,9 @@ const CarItem = ({ params }: { params: { slug: string } }) => {
 
   const recommendedCars = AllCarsData.filter((car) => car.recommended).slice(
     0,
-    3
+    4
   );
-  const recentCars = AllCarsData.slice(0, 3);
+  const recentCars = AllCarsData.slice(3, 7);
 
   return (
     <section className="container max-w-screen-xl mx-auto ">

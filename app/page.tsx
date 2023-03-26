@@ -8,11 +8,11 @@ import { useAllCars } from "@/hooks/dataRequest/all-cars";
 export default function Home() {
   const { data, isLoading } = useAllCars();
 
-  const popularCars = data.slice(0, 3);
+  const popularCars = data.slice(0, 4);
   const recommendedCars = data.filter((car) => car.recommended);
 
   return (
-    <main className={`md:p-4 container mx-auto max-w-screen-2xl`}>
+    <main className={`md:p-4`}>
       <Hero />
       <CarRow rowTitle="Popular Car" data={popularCars} isLoading={isLoading} />
       <CarRow

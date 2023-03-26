@@ -10,6 +10,7 @@ import {
 import CarDetailsInfo from "./car-details-info";
 import useStarsCreate from "@/hooks/use-stars-create";
 import CarDetailsReviews from "./car-details-reviews";
+import { useCartStore } from "@/store/cart";
 
 type TCarDetails = {
   name: string;
@@ -48,7 +49,14 @@ const CarDetails: React.FC<TCarDetails> = ({
   gear,
   category,
   discount,
+  id,
 }) => {
+  const cartAdder = useCartStore((state: any) => state.carAdder);
+
+  const clickHandler = () => {
+    cartAdder(id);
+  };
+
   const starsArr = useStarsCreate(stars_count);
   const [heartFilled, setHeartFilled] = useState(false);
   return (
@@ -86,7 +94,10 @@ const CarDetails: React.FC<TCarDetails> = ({
                   </h3>
                 )}
               </div>
-              <button className="bg-primary px-4 py-3 rounded-md text-white font-semibold min-w-fit mx-4 md:mx-0">
+              <button
+                onClick={clickHandler}
+                className="bg-primary px-4 py-3 rounded-md text-white font-semibold min-w-fit mx-4 md:mx-0"
+              >
                 Rent Now
               </button>
             </div>

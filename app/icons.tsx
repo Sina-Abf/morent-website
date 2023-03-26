@@ -139,7 +139,6 @@ export const NotificationIcon = () => {
         stroke="#C3D4E9"
         strokeOpacity="0.4"
       />
-      <circle cx="36.5" cy="7.5" r="5.5" fill="#FF4423" />
     </svg>
   );
 };

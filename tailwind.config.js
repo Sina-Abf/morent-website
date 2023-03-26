@@ -21,6 +21,7 @@ module.exports = {
       "secondary-500": "#1A202C",
       information: "#54A6FF",
       white: "#fff",
+      orange: "#FF4423",
     },
     extend: {},
   },

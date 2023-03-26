@@ -17,7 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`bg-background ${plusJakarta.className}`}>
+      <body
+        className={`bg-background ${plusJakarta.className} container max-w-screen-xl mx-auto`}
+      >
         <ReactQueryWrapper>
           <Header />
           {children}
