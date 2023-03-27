@@ -9,11 +9,8 @@ import {
 import Search from "./ui/search";
 import Link from "next/link";
 import { useCartStore } from "@/store/cart";
-import classNames from "classnames";
 
 const Header = () => {
-  const cartCount = useCartStore((state: any) => state.cars);
-  console.log(cartCount.length > 0);
   return (
     <header className="p-4 bg-white md:px-8">
       <div className="flex justify-between items-center mb-5">
@@ -33,9 +30,6 @@ const Header = () => {
             </div>
             <Link className="relative" href="/cart">
               <NotificationIcon />
-              {cartCount.length > 0 && (
-                <div className="absolute w-3 h-3 text-white top-0 right-0 bg-orange rounded-full" />
-              )}
             </Link>
             <div>
               <HeartIcon />

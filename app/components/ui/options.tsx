@@ -12,14 +12,17 @@ const Options = ({
     {
       title: "Locations",
       subtitle: "Select your city",
+      id: 1,
     },
     {
       title: "Date",
       subtitle: "Select your date",
+      id: 2,
     },
     {
       title: "Time",
       subtitle: "Select your time",
+      id: 3,
     },
   ];
 
@@ -32,7 +35,7 @@ const Options = ({
       <div className="flex justify-between [&_p]:text-secondary-300 [&_p]:md:text-sm [&_p]:text-xs [&_h2]:text-sm [&_h2]:font-bold [&_h2]:md:text-lg [&_h2]:mb-2">
         {data.map((item, index) => (
           <>
-            <div key={item.title} className="w-full">
+            <div key={item.id} className="w-full">
               <h2>{item.title}</h2>
               <div className="flex items-center justify-between">
                 <p>{item.subtitle}</p>

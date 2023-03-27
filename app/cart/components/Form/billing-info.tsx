@@ -1,4 +1,10 @@
+import Summary from "../summary";
+
 const BillingInfo = () => {
-  return <div>asdsd</div>;
+  return (
+    <div>
+      <Summary />
+    </div>
+  );
 };
 export default BillingInfo;

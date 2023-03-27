@@ -18,7 +18,7 @@ const Form = () => {
   const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form className="col-start-2" onSubmit={handleSubmit(onSubmit)}>
       <BillingInfo />
     </form>
   );
