@@ -3,6 +3,7 @@
 import { useAllCars } from "@/hooks/dataRequest/all-cars";
 import { useCarsStore } from "@/store/store";
 import CarRow from "../components/car-row";
+import Button from "../components/ui/button";
 import Spinner from "../components/ui/spinner";
 import Filters from "./components/filters";
 import OptionsFull from "./components/options-full";
@@ -28,9 +29,7 @@ const Cars = () => {
           {!isLoading && (
             <div className="flex justify-between px-10 mb-14 items-center">
               <div></div>
-              <button className="rounded-md bg-primary text-white font-semibold py-2 px-4">
-                Show More Car
-              </button>
+              <Button>Show More Car</Button>
               <h2 className="text-secondary-300 text-lg font-semibold">
                 120 Car
               </h2>

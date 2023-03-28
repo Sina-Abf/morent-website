@@ -3,6 +3,7 @@ import bodycar from "../../public/images/body-car.png";
 import bodycar2 from "../../public/images/body-car-2.png";
 import Options from "./ui/options";
 import { UpDownArrowIcon } from "@/app/icons";
+import Button from "./ui/button";
 
 const Hero = () => {
   return (
@@ -18,9 +19,9 @@ const Hero = () => {
       <div className="flex flex-col md:flex-row justify-between items-center">
         <Options className="flex-1" title="Pick - Up" />
         <div className="flex items-center mx-4 -my-4 z-10">
-          <button className="bg-primary p-4 rounded-lg shadow-xl">
+          <Button size="big">
             <UpDownArrowIcon />
-          </button>
+          </Button>
         </div>
         <Options className="flex-1" title="Drop - Off" />
       </div>

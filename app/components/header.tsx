@@ -28,9 +28,9 @@ const Header = () => {
             <div>
               <SettingsIcon />
             </div>
-            <Link className="relative" href="/cart">
+            <div>
               <NotificationIcon />
-            </Link>
+            </div>
             <div>
               <HeartIcon />
             </div>

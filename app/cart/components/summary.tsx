@@ -1,5 +1,6 @@
 "use client";
 
+import Button from "@/app/components/ui/button";
 import useStarsCreate from "@/hooks/use-stars-create";
 import { TPopularCar } from "@/public/type";
 import { useCartStore } from "@/store/cart";
@@ -73,7 +74,9 @@ const Summary = () => {
           type="text"
           placeholder="Apply Promo code"
         />
-        <button className="text-secondary-500 font-semibold">Apply now</button>
+        <Button intent="no-bg" className="text-secondary-500 font-semibold">
+          Apply now
+        </Button>
       </form>
       <div className="flex justify-between items-center">
         <div>

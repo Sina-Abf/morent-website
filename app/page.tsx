@@ -4,6 +4,7 @@ import CarRow from "./components/car-row";
 import Hero from "./components/hero";
 
 import { useAllCars } from "@/hooks/dataRequest/all-cars";
+import Button from "./components/ui/button";
 
 export default function Home() {
   const { data, isLoading } = useAllCars();
@@ -23,9 +24,9 @@ export default function Home() {
       />
       <div className="flex justify-between px-10 mb-14 mt-10 items-center">
         <div></div>
-        <button className="rounded-md bg-primary text-white font-semibold py-2 px-4">
+        <Button className="rounded-md bg-primary text-white font-semibold py-2 px-4">
           Show More Car
-        </button>
+        </Button>
         <h2 className="text-secondary-300 text-lg font-semibold">120 Car</h2>
       </div>
     </main>

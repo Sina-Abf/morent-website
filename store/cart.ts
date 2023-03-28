@@ -8,14 +8,11 @@ export const useCartStore = create(
   persist(
     (set) => ({
       cars: [],
-      repeatedCar: false,
 
       carAdder: async (id: any) => {
         const response = await http.get(`/cars/${id}`);
         set((state: any) => ({
-          cars: state.cars.some((car: TPopularCar) => car.id === id)
-            ? [...state.cars]
-            : [...state.cars, response.data],
+          cars: [response.data],
         }));
       },
 

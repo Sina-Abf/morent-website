@@ -11,6 +11,7 @@ import CarDetailsInfo from "./car-details-info";
 import useStarsCreate from "@/hooks/use-stars-create";
 import CarDetailsReviews from "./car-details-reviews";
 import { useCartStore } from "@/store/cart";
+import Link from "next/link";
 
 type TCarDetails = {
   name: string;
@@ -94,12 +95,13 @@ const CarDetails: React.FC<TCarDetails> = ({
                   </h3>
                 )}
               </div>
-              <button
+              <Link
                 onClick={clickHandler}
+                href="/cart"
                 className="bg-primary px-4 py-3 rounded-md text-white font-semibold min-w-fit mx-4 md:mx-0"
               >
                 Rent Now
-              </button>
+              </Link>
             </div>
           </div>
           <div
