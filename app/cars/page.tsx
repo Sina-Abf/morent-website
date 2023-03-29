@@ -15,7 +15,7 @@ const Cars = () => {
   return (
     <>
       <main className=" grid grid-cols-12 gap-4">
-        <div className="col-span-2 hidden lg:block ">
+        <div className="col-span-2 relative">
           <Filters />
         </div>
         <div className="col-span-12 lg:col-span-10 p-4">

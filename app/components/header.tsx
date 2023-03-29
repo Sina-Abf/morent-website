@@ -8,9 +8,13 @@ import {
 } from "@/app/icons";
 import Search from "./ui/search";
 import Link from "next/link";
+import { useCarsStore } from "@/store/store";
 
 const Header = () => {
-  const clickHandler = () => {};
+  const setFilters = useCarsStore((state: any) => state.setFiltersOpen);
+  const clickHandler = () => {
+    setFilters();
+  };
   return (
     <header className="p-4 bg-white md:px-8">
       <div className="flex justify-between items-center mb-5">
