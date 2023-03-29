@@ -8,9 +8,9 @@ import {
 } from "@/app/icons";
 import Search from "./ui/search";
 import Link from "next/link";
-import { useCartStore } from "@/store/cart";
 
 const Header = () => {
+  const clickHandler = () => {};
   return (
     <header className="p-4 bg-white md:px-8">
       <div className="flex justify-between items-center mb-5">
@@ -43,9 +43,12 @@ const Header = () => {
 
       <div className="flex justify-between items-center gap-x-4">
         <Search className="md:hidden" />
-        <div className="border rounded-lg border-secondary-400/20 p-2 md:hidden">
+        <button
+          onClick={clickHandler}
+          className="border rounded-lg border-secondary-400/20 p-2 md:hidden"
+        >
           <FilterIcon />
-        </div>
+        </button>
       </div>
     </header>
   );

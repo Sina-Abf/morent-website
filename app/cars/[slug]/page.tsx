@@ -3,7 +3,6 @@
 import CarRow from "@/app/components/car-row";
 import { useAllCars } from "@/hooks/dataRequest/all-cars";
 import { useSingleCarData } from "@/hooks/dataRequest/single-car";
-import { useCarsStore } from "@/store/store";
 import CarDetails from "./components/car-details";
 import CarDetailsReviews from "./components/car-details-reviews";
 import ImageHandler from "./components/image-handler";

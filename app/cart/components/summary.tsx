@@ -14,7 +14,7 @@ const Summary = () => {
   }, 0);
 
   return (
-    <div className="bg-white rounded-lg p-4 w-full">
+    <div className="bg-white rounded-lg p-4 w-full h-fit">
       <h2 className="font-bold mb-2">Rental Summary</h2>
       <p className="text-secondary-300 mb-4 text-xs">
         Prices may change depending on the length of the rental and the price of

@@ -7,12 +7,19 @@ export const useCarsStore = create((set) => ({
   originalCars: [],
   selectedData: [],
   heartFilled: false,
+  filtersOpen: false,
 
   setHeartFilled: (id: number) => {
     set((state: any) => ({
       cars: state.cars.map((car: TPopularCar) =>
         car.id === id ? { ...car, heart_filled: !car.heart_filled } : car
       ),
+    }));
+  },
+
+  setFiltersOpen: () => {
+    set((state: any) => ({
+      filtersOpen: !state.filtersOpen,
     }));
   },
 

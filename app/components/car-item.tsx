@@ -18,24 +18,12 @@ const CarItem = ({ data }: { data: TPopularCar }) => {
     cartAdder(data.id);
   };
   return (
-    <li className="bg-white p-4 w-full rounded-md max-w-md mx-auto">
+    <li className="bg-white p-4 w-full rounded-md max-w-md mx-auto relative">
       <Link href={`cars/${data.id}`}>
         <div className="flex justify-between mb-8">
           <div>
             <h2 className="font-bold text-lg">{data.name}</h2>
             <p className="text-xs text-secondary-300">{data.category}</p>
-          </div>
-          <div
-            className="cursor-pointer h-fit"
-            onClick={() => setHeartFilled((prev) => !prev)}
-          >
-            <Heart
-              className={classNames(
-                heartFilled
-                  ? "fill-[#ED3F3F] stroke-[#ED3F3F]"
-                  : "stroke stroke-secondary-300"
-              )}
-            />
           </div>
         </div>
         <div className="flex justify-center items-center">
@@ -52,7 +40,7 @@ const CarItem = ({ data }: { data: TPopularCar }) => {
           </div>
           <div>
             <PeopleIcon />
-            <p>{data.capacity}</p>
+            <p className="whitespace-nowrap">{data.capacity}</p>
           </div>
         </div>
         <div className="flex items-center justify-between px-4 py-1">
@@ -77,6 +65,18 @@ const CarItem = ({ data }: { data: TPopularCar }) => {
           </Link>
         </div>
       </Link>
+      <div
+        className="cursor-pointer h-fit absolute top-3 right-4"
+        onClick={() => setHeartFilled((prev) => !prev)}
+      >
+        <Heart
+          className={classNames(
+            heartFilled
+              ? "fill-[#ED3F3F] stroke-[#ED3F3F]"
+              : "stroke stroke-secondary-300"
+          )}
+        />
+      </div>
     </li>
   );
 };

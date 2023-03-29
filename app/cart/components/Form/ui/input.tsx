@@ -1,0 +1,46 @@
+import classNames from "classnames";
+import {
+  FieldErrors,
+  FieldValues,
+  Path,
+  UseFormRegister,
+} from "react-hook-form";
+import { Inputs } from "../form";
+
+type InputProps<T extends FieldValues> = {
+  label: string;
+  name: Path<T>;
+  placeholder: string;
+  register: UseFormRegister<T>;
+  classname?: string;
+  required?: boolean;
+};
+
+function Input<T extends FieldValues>({
+  label,
+  name,
+  placeholder,
+  register,
+  classname,
+}: InputProps<T>) {
+  return (
+    <div>
+      <label className="font-semibold mb-1 block" htmlFor={name}>
+        {label}
+      </label>
+      <input
+        placeholder={placeholder}
+        className={classNames(
+          "bg-background placeholder:text-secondary-300 w-full placeholder:text-sm border-none focus:ring-2 py-3 px-4 rounded-lg mb-4",
+          classname
+        )}
+        type="text"
+        id={name}
+        {...register(name, { required: `${label} is required` })}
+        name={name}
+      />
+    </div>
+  );
+}
+
+export default Input;
