@@ -13,7 +13,6 @@ type InputProps<T extends FieldValues> = {
   placeholder: string;
   register: UseFormRegister<T>;
   classname?: string;
-  required?: boolean;
 };
 
 function Input<T extends FieldValues>({
@@ -36,7 +35,7 @@ function Input<T extends FieldValues>({
         )}
         type="text"
         id={name}
-        {...register(name, { required: `${label} is required` })}
+        {...register(name)}
         name={name}
       />
     </div>
