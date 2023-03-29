@@ -26,17 +26,17 @@ function Radio<T extends FieldValues>({
 }: InputProps<T>) {
   return (
     <li className=" bg-background rounded-lg p-4">
-      <div className="flex justify-between items-center mb-8">
+      <div className="flex justify-between items-center mb-8 h-full">
         <div className="flex items-center gap-x-4">
           <input
             className=""
             type="radio"
-            id={name}
+            id={value}
             {...register(name)}
             name={name}
             value={value}
           />
-          <label className="font-semibold mb-1" htmlFor={name}>
+          <label className="font-semibold mb-1" htmlFor={value}>
             {label}
           </label>
         </div>
