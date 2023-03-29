@@ -29,7 +29,7 @@ function Radio<T extends FieldValues>({
       <div className="flex justify-between items-center mb-8 h-full">
         <div className="flex items-center gap-x-4">
           <input
-            className=""
+            className="focus:ring-0 focus:ring-offset-0"
             type="radio"
             id={value}
             {...register(name)}
