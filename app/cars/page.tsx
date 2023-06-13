@@ -1,12 +1,13 @@
-"use client";
+'use client';
 
-import { useAllCars } from "@/hooks/dataRequest/all-cars";
-import { useCarsStore } from "@/store/store";
-import CarRow from "../components/car-row";
-import Button from "../components/ui/button";
-import Spinner from "../components/ui/spinner";
-import Filters from "./components/filters";
-import OptionsFull from "./components/options-full";
+import { useAllCars } from '@/hooks/dataRequest/all-cars';
+import { useCarsStore } from '@/store/store';
+import CarRow from '../components/car-row';
+import Button from '../components/ui/button';
+import Spinner from '../components/ui/spinner';
+import Filters from './components/filters';
+import OptionsFull from './components/options-full';
+import Link from 'next/link';
 const Cars = () => {
   const carsData = useCarsStore((state: any) => state.cars);
 
