@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import { MouseEvent, useState } from "react";
+import Image from 'next/image';
+import { MouseEvent, useState } from 'react';
 
 type Props = {
   imageOne: string;
@@ -25,13 +25,14 @@ const ImageHandler: React.FC<Props> = ({
 
   return (
     <div className="">
-      <div className="mb-4">
+      <div className="mb-4 h-auto">
         <Image
           className="rounded-xl"
           src={selectedImage}
           alt={name}
           width={500}
           height={500}
+          priority
         />
       </div>
       <div className="flex justify-between p-1 max-w-md gap-x-4">

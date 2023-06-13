@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
-import { GasIcon, Heart, PeopleIcon, SteerWheelIcon } from "@/app/icons";
-import { TPopularCar } from "@/public/type";
-import { useCartStore } from "@/store/cart";
-import classNames from "classnames";
-import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
-import Button from "./ui/button";
+import { GasIcon, Heart, PeopleIcon, SteerWheelIcon } from '@/app/icons';
+import { TPopularCar } from '@/public/type';
+import { useCartStore } from '@/store/cart';
+import classNames from 'classnames';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useState } from 'react';
+import Button from './ui/button';
 
 const CarItem = ({ data }: { data: TPopularCar }) => {
   const [heartFilled, setHeartFilled] = useState(false);
@@ -72,8 +72,8 @@ const CarItem = ({ data }: { data: TPopularCar }) => {
         <Heart
           className={classNames(
             heartFilled
-              ? "fill-[#ED3F3F] stroke-[#ED3F3F]"
-              : "stroke stroke-secondary-300"
+              ? 'fill-[#ED3F3F] stroke-[#ED3F3F]'
+              : 'stroke stroke-secondary-300'
           )}
         />
       </div>
